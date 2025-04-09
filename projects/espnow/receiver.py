@@ -132,11 +132,11 @@ while True:
         # Update OLED display
         oled.fill(0)
         oled.text("ESP-NOW Receiver", 0, 0)
-        oled.text("Msg received:", 0, 10)
-        oled.text(msg.decode(), 0, 20)
-        oled.text(f"Count: {recv_count}", 0, 30)
-        oled.text(f"RSSI: {rssi} dBm", 0, 50)
-        draw_signal_bars(oled, 0, 40, percentage)
+        oled.text("Msg received:", 0, 16)
+        oled.text(msg.decode(), 0, 26)
+        oled.text(f"Count: {recv_count}", 0, 36)
+        oled.text(f"RSSI: {rssi} dBm", 0, 56)
+        draw_signal_bars(oled, 0, 46, percentage)
         oled.show()
         
         # Send RSSI back to sender if we've added them as peer
